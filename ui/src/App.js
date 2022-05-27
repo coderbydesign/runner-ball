@@ -10,6 +10,7 @@ function App() {
           paddingBottom: "1rem",
         }}
       >
+        <Link to="/">Home</Link> |{" "}
         <Link to="/weather">Weather</Link> |{" "}
         <Link to="/score">Score</Link> |{" "}
         <Link to="/bulb">Bulb</Link>
