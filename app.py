@@ -5,6 +5,7 @@ import time
 
 from dotenv import load_dotenv
 from flask import Flask
+from flask_cors import CORS
 from apis.weather import weather_api
 from apis.bulb import bulb_api
 from apis.score import score_api
@@ -16,6 +17,7 @@ from lib.weather import WeatherStats
 from pyowm.commons.exceptions import InvalidSSLCertificateError, TimeoutError
 
 app = Flask(__name__)
+CORS(app)
 app.register_blueprint(weather_api)
 app.register_blueprint(bulb_api)
 app.register_blueprint(score_api)
