@@ -1,4 +1,4 @@
-import DataRenderer from '../data_renderer';
+import DataRenderer from '../dataRenderer';
 
 export default function Bulb() {
   return (
