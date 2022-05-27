@@ -10,6 +10,7 @@ python-kasa = "*"
 python-dotenv = "*"
 pyyaml = "*"
 jsonpickle = "*"
+flask-cors = "*"
 
 [dev-packages]
 
