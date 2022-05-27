@@ -58,6 +58,13 @@ Available APIs:
 | /api/bulb/                                   | Current and historical data from your Kasa bulb                            |
 | /api/score/                                  | Your current running score (and context), based on weather and preferences |
 
+#### Run the UI:
+You can access the API data through the UI as well, by running the front-end
+server, which will be accessible on port 3000:
+```
+$ npm start --prefix ui
+```
+
 ## Preferences
 Ideal weather/running preferences are set in a yaml file, default location being
 `/data/preferences.yml`. These preferences help drive the program to consider your
