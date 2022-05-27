@@ -2,10 +2,16 @@ import React, { useEffect, useState } from 'react';
 
 export default function DataRenderer(props) {
   const [state, setState] = useState({})
+  const [loading, setLoading] = useState(true)
+
   useEffect(() => {
-      fetch(`/api/${props.dataPath}`).then(
-        res => res.json())
-      .then(res => setState(res))
+      fetch(`/api/${props.dataPath}`).then(res =>
+        res.json())
+      .then(res => {
+          setState(res)
+          setLoading(false)
+        }
+      )
   }, [props.title, props.dataPath])
 
   return (
@@ -14,6 +20,7 @@ export default function DataRenderer(props) {
         <h2>{props.title}</h2>
       </main>
 
+      {loading ? "Loading data..." : ""}
       <ul>
         {
           Object.keys(state).map((key,i)=>{
